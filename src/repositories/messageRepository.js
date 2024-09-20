@@ -1,0 +1,22 @@
+const {messageModel} = require('../models')
+const handleFactory = require('./handleFactory')
+
+exports.createMessage = handleFactory.createOne(messageModel);
+exports.updateMessage = handleFactory.updateOne(messageModel);
+exports.getMessage = handleFactory.getOne(messageModel);
+exports.getMessageById = handleFactory.getOneId(messageModel);
+exports.deleteMessage = handleFactory.deleteOne(messageModel);
+exports.clearMessage = handleFactory.clearOne(messageModel);
+exports.activeMessage = handleFactory.activeOne(messageModel);
+exports.getAllMessages = handleFactory.getAll(messageModel);
+exports.countMessages = handleFactory.countDocuments(messageModel);
+exports.getMessageInstance = handleFactory.getModel(messageModel);
+exports.getMessageInstanceConstructor = handleFactory.getModelConstructor(messageModel);
+exports.bulkWriteMessages = handleFactory.bulkWrite(messageModel);
+exports.aggregateMessages = handleFactory.aggregate(messageModel);
+exports.distinctMessages = handleFactory.distinct(messageModel);
+exports.findOneAndDeleteMessage = handleFactory.findOneAndDelete(messageModel);
+exports.findByIdAndReplaceMessage = handleFactory.findByIdAndReplace(messageModel);
+exports.updateManyMessages = handleFactory.updateMany(messageModel);
+exports.transactionMessages = handleFactory.transaction;
+exports.populateVirtualsMessage = handleFactory.populateVirtuals;
